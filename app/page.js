@@ -40,11 +40,11 @@ export default function Home() {
         <div className='w-[50%] lg:w-[75%]'>
         <form onSubmit={handleSubmit} className='w-full '>
             
-          <Paper sx={{bgcolor:'#0059F7',borderRadius:'24px'}} className='
-          w-full px-[8px] shadow-card flex items-center'>
-            <Icon sx={{color:'white'}} className='w-fit h-full '>
-              <SearchIcon/>
-            </Icon>
+
+            <div className=' bg-[#0059F7] rounded-[24px] flex
+            w-full px-[8px] shadow-card items-center'>
+              <SearchIcon sx={{color:'white'}}/>
+
             <TextField 
             sx={{flex:3,borderRadius:'24px',bgcolor:'#0059F7',input:{color:'white',fontFamily:'Roboto,sans-serif'},border:'none',"& fieldset": { border: 'none' },}} 
             variant='filled' InputProps={{disableUnderline:true}} label='domain' InputLabelProps={{style:{color:'white',fontFamily:'Roboto,sans-serif'}}} 
@@ -53,7 +53,8 @@ export default function Home() {
             <button onClick={handleSubmit} className='md:flex-1 border border-none rounded-[16px] ml-[32px] md:ml-[8px] px-[24px] lg:px-[12px] py-[15px] bg-[#689EFF] text-white my-[8px]'>
               Check Records
             </button>
-        </Paper>
+            </div>
+
         </form>
         </div>
       </div>
