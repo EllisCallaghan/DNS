@@ -41,7 +41,7 @@ export default function Home() {
         <form onSubmit={handleSubmit} className='w-full '>
             
           <Paper sx={{bgcolor:'#0059F7',borderRadius:'24px',display:'flex',alignItems:'center'}} className='
-          w-full px-[8px] shadow-card'>
+          w-full px-[8px] shadow-card flex items-center'>
             <Icon sx={{color:'white'}} className='w-fit h-full px-[8px]'>
               <SearchIcon/>
             </Icon>
