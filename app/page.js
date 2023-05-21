@@ -38,9 +38,10 @@ export default function Home() {
           </p>
         </div>
         <div className='w-[50%] lg:w-[75%]'>
-        <form onSubmit={handleSubmit} className='w-full'>
+        <form onSubmit={handleSubmit} className='w-full '>
             
-          <Paper sx={{bgcolor:'#0059F7',borderRadius:'24px',display:'flex',alignItems:'center'}} className='w-full px-[8px]'>
+          <Paper sx={{bgcolor:'#0059F7',borderRadius:'24px',display:'flex',alignItems:'center'}} className='
+          w-full px-[8px] shadow-card'>
             <Icon sx={{color:'white'}} className='w-fit h-full px-[8px]'>
               <SearchIcon/>
             </Icon>
@@ -57,7 +58,8 @@ export default function Home() {
         </div>
       </div>
       {/* form */}
-      <div className='w-[50%] lg:w-[75%] md:w-[90%] border border-slate-500 rounded-md'>
+      <div className='w-[50%] lg:w-[75%] md:w-[90%] border border-slate-500 rounded-md
+       '>
         <DataTable/>
       </div>
       <div className='w-[60%]'>

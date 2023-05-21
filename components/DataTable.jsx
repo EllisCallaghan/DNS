@@ -19,26 +19,28 @@ const rows = [
 
 const DataTable = () => {
   return (
-    <TableContainer component={Paper}>
-        <Table sx={{backgroundColor:'#070E27', border:'none'}}>
-            <TableHead>
-                <TableRow >
-                    <TableCell sx={{color:'white',borderBottom:'none'}} align="center">Type</TableCell>
-                    <TableCell sx={{color:'white',borderBottom:'none'}} align="left">Description</TableCell>
-                    <TableCell sx={{color:'white',borderBottom:'none'}} align="left">Function</TableCell>
-                </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows.map((row) => (
-                <TableRow key={row.name}>
-                  <TableCell sx={{color:'white',borderBottom:'none'}} align="center">{row.type}</TableCell>
-                  <TableCell sx={{color:'white',borderBottom:'none'}} align="left">{row.description}</TableCell>
-                  <TableCell sx={{color:'white',borderBottom:'none'}} align="left">{row.Function}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-        </Table>
-    </TableContainer>
+
+      <TableContainer component={Paper}>
+          <Table sx={{backgroundColor:'#070E27', border:'none'}}>
+              <TableHead>
+                  <TableRow >
+                      <TableCell sx={{color:'white',borderBottom:'none'}} align="center">Type</TableCell>
+                      <TableCell sx={{color:'white',borderBottom:'none'}} align="left">Description</TableCell>
+                      <TableCell sx={{color:'white',borderBottom:'none'}} align="left">Function</TableCell>
+                  </TableRow>
+              </TableHead>
+              <TableBody>
+                {rows.map((row) => (
+                  <TableRow key={row.name}>
+                    <TableCell sx={{color:'white',borderBottom:'none'}} align="center">{row.type}</TableCell>
+                    <TableCell sx={{color:'white',borderBottom:'none'}} align="left">{row.description}</TableCell>
+                    <TableCell sx={{color:'white',borderBottom:'none'}} align="left">{row.Function}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+          </Table>
+      </TableContainer>
+
   )
 }
 

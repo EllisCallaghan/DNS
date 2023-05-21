@@ -10,6 +10,9 @@ module.exports = {
       fontFamily:{
         'primary': ['Roboto','sans-serif'],
       },
+      boxShadow: {
+        card: "-10px 0px 120px 30px #211e35",
+      },
     },
     screens:{
       'xl':{'max':'1440px'},
