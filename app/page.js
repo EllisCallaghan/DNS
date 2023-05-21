@@ -40,9 +40,9 @@ export default function Home() {
         <div className='w-[50%] lg:w-[75%]'>
         <form onSubmit={handleSubmit} className='w-full '>
             
-          <Paper sx={{bgcolor:'#0059F7',borderRadius:'24px',display:'flex',alignItems:'center'}} className='
-          w-full px-[8px] shadow-card'>
-            <Icon sx={{color:'white'}} className='w-fit h-full px-[8px]'>
+          <Paper sx={{bgcolor:'#0059F7',borderRadius:'24px'}} className='
+          w-full px-[8px] shadow-card flex items-center'>
+            <Icon sx={{color:'white'}} className='w-fit h-full '>
               <SearchIcon/>
             </Icon>
             <TextField 

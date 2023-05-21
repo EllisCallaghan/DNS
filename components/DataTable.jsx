@@ -31,7 +31,7 @@ const DataTable = () => {
               </TableHead>
               <TableBody>
                 {rows.map((row) => (
-                  <TableRow key={row.name}>
+                  <TableRow key={row.type}>
                     <TableCell sx={{color:'white',borderBottom:'none'}} align="center">{row.type}</TableCell>
                     <TableCell sx={{color:'white',borderBottom:'none'}} align="left">{row.description}</TableCell>
                     <TableCell sx={{color:'white',borderBottom:'none'}} align="left">{row.Function}</TableCell>
