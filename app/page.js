@@ -8,6 +8,7 @@ import SearchIcon from '@mui/icons-material/Search'
 import AnimatedText from '@/components/AnimatedText'
 import DataTable from '@/components/DataTable'
 import News from '@/components/News'
+import StarsCanvas from '@/components/canvas/Stars'
 
 
 
@@ -24,10 +25,10 @@ export default function Home() {
   
 
   return (
-    
-    <main className="gap-[48px] h-full w-full
+ 
+      <main className=" z-0 relative gap-[48px] w-full
     flex flex-col items-center justify-between px-24 pt-24 pb-12 xl:px-12 lg:px-0 bg-[#070E27] font-primary">
-      {/* Hero */}
+
       <div className='gap-[48px] flex flex-col items-center justify-between w-full'>
         <div className=' flex flex-col gap-[14px] max-w-[90%] text-center items-center justify-between'>
           <AnimatedText text="Lorem Ipsum Dolor Sit Amet Consectetur." 
@@ -37,7 +38,7 @@ export default function Home() {
             sit amet turpis cursus rutrum. Suspendisse a.
           </p>
         </div>
-        <div className='w-[50%] lg:w-[75%]'>
+        <div className='w-[50%] lg:w-[75%] md:w-[90%]'>
         <form onSubmit={handleSubmit} className='w-full '>
             
 
@@ -58,16 +59,17 @@ export default function Home() {
         </form>
         </div>
       </div>
-      {/* form */}
+   
       <div className='w-[50%] lg:w-[75%] md:w-[90%] border border-slate-500 rounded-md
        '>
         <DataTable/>
       </div>
+      
       <div className='w-[60%]'>
         <News/>
       </div>
-    </main>
-    
-    
+      
+      </main>
+
   )
 }
