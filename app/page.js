@@ -8,7 +8,6 @@ import SearchIcon from '@mui/icons-material/Search'
 import AnimatedText from '@/components/AnimatedText'
 import DataTable from '@/components/DataTable'
 import News from '@/components/News'
-import StarsCanvas from '@/components/canvas/Stars'
 
 
 
