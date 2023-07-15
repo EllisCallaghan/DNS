@@ -42,7 +42,9 @@ async function doLookupMx(domain){
 
 async function doLookupTxt(domain){
   return dnsPromises.resolveTxt(domain).then((item) =>{
+    console.log(item)
     return item
+    
   }).catch((error) => {
     console.log('no Txt Records')
     return []})
@@ -116,7 +118,8 @@ export default async function Page({ params }) {
   
 
   return (
-    <div className="bg-[#070E27] text-white flex flex-col items-start px-24 gap-12">
+    <div className="bg-[#070E27] text-white w-full
+     flex flex-col items-start md:items-center px-24 gap-12">
       <p className="text-2xl">{params.id}</p>
       <div>
         <h1 className="text-2xl">IPv4 addresses</h1>
@@ -150,7 +153,7 @@ export default async function Page({ params }) {
         <h1 className="text-2xl">CNAME addresses</h1>
         {arrCNAME === undefined ? null :
         arrCNAME.map((address) => (
-          <div>
+          <div className="flex flex-col gap-[10px] justify-between flex-wrap">
           <p >value: {address.value}</p>
           </div>
         ))}
@@ -158,25 +161,30 @@ export default async function Page({ params }) {
       <div>
         <h1 className="text-2xl">TXT records</h1>
 
-          <div>
+          <ol className="list-decimal flex flex-col gap-[10px] justify-between flex-wrap">
           {arrTxt.map((item)=>(
-            <p>{item}</p>
-          ))}
-          </div>
+            
+            <li>{item}</li>
+            
+          ))} 
+          </ol>
 
       </div>
       <div>
         <h1 className="text-2xl">NS records</h1>
 
-          <div>
-          <p>{arrNs}</p>
-          </div>
+          <ol className="list-decimal flex flex-col gap-[10px] justify-between flex-wrap">
+          {arrNs.map((item) => (
+            <li>{item}</li>
+          ))
+          }
+          </ol>
 
       </div>
       <div>
       <h1 className="text-2xl">CAA records</h1>
 
-          <div>
+          <div className="flex flex-col gap-[10px] justify-between flex-wrap">
           {
             arrCaa.map((item) => (
               <p >{`critical: ${item.critical},  issue: ${item.issue}`}</p>
@@ -189,7 +197,7 @@ export default async function Page({ params }) {
       <div>
       <h1 className="text-2xl">MX records</h1>
 
-          <div>
+          <div className="flex flex-col gap-[10px] justify-between flex-wrap">
             {
               arrMx.map((item) =>(
                 <p >{`exchange: ${item.exchange},  priority: ${item.priority}`}</p>
@@ -201,14 +209,13 @@ export default async function Page({ params }) {
       </div>
       <div>
       <h1 className="text-2xl">SOA records</h1>
-          <div className="flex flex-col">
-            <div>
+          <div className="flex flex-col gap-[10px] justify-between flex-wrap">
+
             
               <p>{`nsname: ${arrSoa.nsname},  hostmaster: ${arrSoa.hostmaster}`}</p>
               <p>{`serial: ${arrSoa.serial},  refresh: ${arrSoa.refresh}`}</p>
               <p>{`retry: ${arrSoa.retry},  expire: ${arrSoa.expire}`}</p>
               <p>{`minttl:${arrSoa.minttl}`}</p>
-              </div>
             
           
 
@@ -218,21 +225,21 @@ export default async function Page({ params }) {
           </div>
       </div>
       <div>
-      <h1>SRV records</h1>
+      <h1 className="text-2xl">SRV records</h1>
       {
         arrSrv.map((address) =>(
-          <div>
+          <div className="flex flex-col gap-[10px] justify-between flex-wrap">
             <p>{`priority:${address.priority}, weight:${address.weight}`}</p>
             <p>{`port:${address.port}, name:${address.name}`}</p>
           </div>
         ))
       }
       </div>
-      <div>
-      <h1>PTR records</h1>
+      <div >
+      <h1 className="text-2xl">PTR records</h1>
       {
         arrPtr.map((item) =>(
-          <div>
+          <div className="flex flex-col gap-[10px] justify-between flex-wrap">
             <p>{item}</p>
           </div>
         ))
