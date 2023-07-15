@@ -118,8 +118,8 @@ export default async function Page({ params }) {
   
 
   return (
-    <div className="bg-[#070E27] text-white w-full
-     flex flex-col items-start md:items-center px-24 gap-12">
+    <div className="bg-[#070E27] text-white w-full sm:px-6 overflow-scroll
+     flex flex-col items-start sm:items-start px-24 gap-12">
       <p className="text-2xl">{params.id}</p>
       <div>
         <h1 className="text-2xl">IPv4 addresses</h1>
@@ -158,13 +158,14 @@ export default async function Page({ params }) {
           </div>
         ))}
       </div>
-      <div>
+      <div className="sm:max-w-[240px] h-full">
         <h1 className="text-2xl">TXT records</h1>
 
-          <ol className="list-decimal flex flex-col gap-[10px] justify-between flex-wrap">
+          <ol className="sm:max-w-[240px] h-full
+          list-decimal break-words flex flex-col gap-[10px] justify-between flex-wrap">
           {arrTxt.map((item)=>(
             
-            <li>{item}</li>
+            <li className="break-words text-[9px] min-h-[2rem] sm:max-w-[240px] flex flex-wrap">{item}</li>
             
           ))} 
           </ol>
